@@ -1,0 +1,21 @@
+{
+  "name": "redcap-em-orca-call-list",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "primevue": "^4.2.0",
+    "vue": "^3.4.0",
+    "@primevue/themes": "^4.2.0",
+    "primeicons": "^7.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "^5.0.5"
+  }
+}
