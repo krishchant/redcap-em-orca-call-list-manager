@@ -1,0 +1,176 @@
+
+{
+  "name": "Orca Call List Manager",
+  "namespace": "ORCA\\OrcaCallListManager",
+  "description": "A configurable, searchable, call list dashboard",
+  "authors": [
+    {
+      "name": "Chris Kadolph",
+      "email": "kadolph.christopher@marshfieldresearch.org",
+      "institution": "Marshfield Clinic Research Institute"
+    },
+    {
+      "name": "Krishna Upadhyay",
+      "email": "upadhyay.krishna@marshfieldresearch.org",
+      "institution": "Marshfield Clinic Research Institute"
+    },
+    {
+      "name": "Leila Deering",
+      "email": "deering.leila@marshfieldresearch.org",
+      "institution": "Marshfield Clinic Research Institute"
+    },
+    {
+      "name": "Jordan Roush",
+      "email": "roush.jordan@marshfieldresearch.org",
+      "institution": "Marshfield Clinic Research Institute"
+    }
+  ],
+  "framework-version": 14,
+  "auth-ajax-actions": [
+    "get-call-list-data",
+    "get-page-state",
+    "save-page-state"
+  ],
+  "links": {
+    "project": [
+      { "name": "PLACEHOLDER 0", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 0, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 1", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 1, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 2", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 2, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 3", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 3, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 4", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 4, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 5", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 5, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 6", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 6, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 7", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 7, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 8", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 8, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 9", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 9, "show-header-and-footer": true },
+      { "name": "PLACEHOLDER 10", "icon": "fas fa-tasks", "url": "views/call_list.php", "link_num": 10, "show-header-and-footer": true }
+    ]
+  },
+  "project-settings": [
+    {
+      "key": "dashboard_config",
+      "name": "Dashboard Configuration <span class=\"badge badge-secondary p-1\">LIMIT - 10</span>",
+      "type": "sub_settings",
+      "repeatable": true,
+      "sub_settings": [
+        {
+          "key": "display_title",
+          "name": "Display the title of table (default: Orca Call List)",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "key": "display_contact_attempts",
+          "name": "Display the contact attempts by time of day (AM/PM/EVE)",
+          "required": false,
+          "type": "checkbox"
+        },
+        {
+          "key": "range_am",
+          "name": "AM Time Range (e.g., 00:00-11:59)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "range_pm",
+          "name": "PM Time Range (e.g., 12:00-17:59)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "range_eve",
+          "name": "EVE Time Range (e.g., 18:00-23:59)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "primary_filter_field",
+          "name": "Primary filter field",
+          "required": false,
+          "type": "field-list",
+          "autocomplete":  true
+        },
+        {
+          "key": "exclude_empty_no_contact",
+          "name": "Exclude 'No Contact' Results when the instrument has no data",
+          "required": false,
+          "type": "checkbox",
+          "repeatable": false
+        },
+        {
+          "key": "call_back_date_time",
+          "name": "<b>Date field that, if displayed in the results, will alert the user with the following:</b> <i class='fas fa-exclamation-triangle text-danger'></i>&nbsp;<span>Call Back Date/Time has been exceeded</span>",
+          "required": false,
+          "type": "field-list",
+          "autocomplete":  true
+        },
+        {
+          "key": "call_date_field",
+          "name": "Select the date field that will be used for displaying contact attempts.  This must be a date/time field and must exist on a repeating instrument.",
+          "required": false,
+          "type": "field-list",
+          "autocomplete":  true
+        },
+        {
+          "key": "prevent_empty_search",
+          "name": "Prevent Empty Search - Require filter selection before showing data",
+          "required": false,
+          "type": "checkbox"
+        },
+        {
+          "key": "display_filter_fields",
+          "name": "Select additional filter for Call List (dropdown)",
+          "required": false,
+          "type": "field-list"
+        },
+        {
+          "key": "display_entries_number",
+          "name": "Select default number of entries to show",
+          "required": false,
+          "type": "dropdown",
+          "choices": [
+            { "value": 10, "name": "10" },
+            { "value": 25, "name": "25" },
+            { "value": 50, "name": "50" },
+            { "value": 100, "name": "100" },
+            { "value": 150, "name": "150" },
+            { "value": 200, "name": "200" },
+            { "value": 500, "name": "500" }
+          ]
+        },
+        {
+          "key": "display_fields",
+          "name": "Select the fields for display",
+          "required": true,
+          "type": "sub_settings",
+          "repeatable": true,
+          "sub_settings": [
+            {
+              "key": "display_field_name",
+              "name": "Field To Display in the Call List",
+              "required": true,
+              "type": "field-list"
+            },
+            {
+              "key": "display_field_sort_direction",
+              "name": "Default Sort Direction",
+              "required": false,
+              "type": "dropdown",
+              "choices": [
+                { "value": "NONE", "name": "None" },
+                { "value": "asc", "name": "Ascending" },
+                { "value": "desc", "name": "Descending" }
+              ]
+            },
+            {
+              "key": "display_field_sort_priority",
+              "name": "Sort Priority (1, 2, 3...)",
+              "required": false,
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

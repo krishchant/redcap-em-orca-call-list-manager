@@ -1,0 +1,96 @@
+
+/* Status row colors */
+.cl-green { background-color: #c1ffd3 !important; }
+.cl-green:hover { background-color: #b1dfbb !important; }
+
+.cl-blue { background-color: #bee5eb !important; }
+.cl-blue:hover { background-color: #abdde5 !important; }
+
+.cl-red { background-color: #f5c6cb !important; }
+.cl-red:hover { background-color: #f1b0b7 !important; }
+
+.cl-purple { background-color: #e0beeb !important; }
+.cl-purple:hover { background-color: #e3b1f3 !important; }
+
+.cl-yellow { background-color: #ffeeba !important; }
+.cl-yellow:hover { background-color: #ffe8a1 !important; }
+
+.cl-orange { background-color: #FFDAB9 !important; }
+.cl-orange:hover { background-color: #fbc99c !important; }
+
+.p-datatable .p-datatable-thead > tr > th { font-weight:bold !important; }
+
+.p-datatable .p-datatable-tbody > tr.cl-green { background-color: #c1ffd3 !important; }
+.p-datatable .p-datatable-tbody > tr.cl-green:hover { background-color: #b1dfbb !important; }
+
+.p-datatable .p-datatable-tbody > tr.cl-blue { background-color: #bee5eb !important; }
+.p-datatable .p-datatable-tbody > tr.cl-blue:hover { background-color: #abdde5 !important; }
+
+.p-datatable .p-datatable-tbody > tr.cl-red { background-color: #f5c6cb !important; }
+.p-datatable .p-datatable-tbody > tr.cl-red:hover { background-color: #f1b0b7 !important; }
+
+.p-datatable .p-datatable-tbody > tr.cl-purple { background-color: #e0beeb !important; }
+.p-datatable .p-datatable-tbody > tr.cl-purple:hover { background-color: #e3b1f3 !important; }
+
+.p-datatable .p-datatable-tbody > tr.cl-yellow { background-color: #ffeeba !important; }
+.p-datatable .p-datatable-tbody > tr.cl-yellow:hover { background-color: #ffe8a1 !important; }
+
+.p-datatable .p-datatable-tbody > tr.cl-orange { background-color: #FFDAB9 !important; }
+.p-datatable .p-datatable-tbody > tr.cl-orange:hover { background-color: #fbc99c !important; }
+
+
+.cl-filter-square {
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    border: 1px solid #333;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+
+.call-list-card {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.call-list-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem;
+}
+
+.call-list-body {
+    padding: 1rem;
+}
+
+.filter-section h6 {
+    font-weight: 600;
+    color: #495057;
+}
+
+.filter-checkbox {
+    cursor: pointer;
+}
+
+.filter-checkbox label {
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    color: #6c757d;
+}
+
+.module-footer {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
