@@ -4,7 +4,7 @@ namespace ORCA\OrcaCallListManager;
 
 trait ModuleUtils {
 
-    private $_metadata = [];
+    private $_metadata = null;
 
     public function getCallListConfig($project_id, $config_index = 0) {
         global $Proj;
